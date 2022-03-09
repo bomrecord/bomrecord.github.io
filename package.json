@@ -78,6 +78,7 @@
     "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
   },
   "scripts": {
+    "deploy": "gatsby build && gh-pages -d public -b deploy -r 'git@github.com:log4bom/log4bom.github.io.git'",
     "post": "gatsby-post-gen",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
