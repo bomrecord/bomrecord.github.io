@@ -1,8 +1,8 @@
 module.exports = {
   title: `log4bom`,
   description: ``,
-  author: `newbom`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  author: `log4bom`,
+  introduction: ``,
   siteUrl: `https://log4bom.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
