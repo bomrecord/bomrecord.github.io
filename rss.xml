@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[log4bom]]></title><description><![CDATA[log4bom]]></description><link>https://log4bom.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Mar 2022 17:16:16 GMT</lastBuildDate><item><title><![CDATA[Quick Start]]></title><description><![CDATA[Getting Started 😎 1. Create a Gatsby site. If you are not using , following Gatsby Getting Started 2. Start developing. 3. Add your content…]]></description><link>https://log4bom.github.io/HTTP/quick_start/</link><guid isPermaLink="false">https://log4bom.github.io/HTTP/quick_start/</guid><pubDate>Sun, 05 Jul 2020 17:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;getting-started-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getting-started-&quot; aria-label=&quot;getting started  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Getting Started 😎&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[log4bom]]></title><description><![CDATA[log4bom]]></description><link>https://log4bom.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Mar 2022 18:41:22 GMT</lastBuildDate><item><title><![CDATA[늦었어도 한다]]></title><description><![CDATA[…]]></description><link>https://log4bom.github.io/TIL/test1/</link><guid isPermaLink="false">https://log4bom.github.io/TIL/test1/</guid><pubDate>Fri, 11 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;초등학교 때 동네 &lt;code class=&quot;language-text&quot;&gt;컴퓨터학원&lt;/code&gt;에 다녔고 비주얼베이직을 배워본 기억이 난다.
+그때 그것을 제대로 이해했던것 같진 않다.
+컴퓨터학원 원장선생님의 꿈이 컴퓨터 학교를 세우는 것이라고 했던 것과,
+수업 끝나고 자율학습공간에서 테트리스를 신나게 하던 것이 기억에 난다. &lt;/p&gt;
+&lt;p&gt;처음 비교적 제정신으로(?) 개발을 마음에 품었을 때는 그저 막연한 &lt;code class=&quot;language-text&quot;&gt;동경&lt;/code&gt;이었다.
+전공자가 아니었기 때문에 60세 정도 나이가 들면 취미로 얼마간 해보고싶은 그런 멋있는 분야 정도였다.
+너무 먼 이야기인지라 현실에서 실행하고자 한 적은 없었다. &lt;/p&gt;
+&lt;p&gt;진짜로 이거다- 하고 꽝! 머릿속에 크나큰 희열로 다가왔던 순간은 플래시를 배우러 갔던 사설 학원에서 액션스크립트를 작성할 때였다.
+&lt;code class=&quot;language-text&quot;&gt;IF문과 FOR문&lt;/code&gt;을 배웠는데 처음으로 그것이 하나의 ‘명확하고 창조적인 언어’로 다가왔고
+내가 작성한 문장대로 무엇인가가 만들어진다는 것이 너무 좋아서 한동안 두고두고 생각했던 것 같다.
+그러나 이미 내 전공은 사회복지였고 우리학교엔 컴퓨터관련학과가 없었던지라 뭘 하려고 하진 않았었다. &lt;/p&gt;
+&lt;p&gt;시간이 흘러 졸업을 했고, 좀더 실용적인 것을 배우고싶어서 외대에 편입을 했고, 사정상 졸업을 하지 못하고 일을 하러 다니게 되었다.
+사진관 어시스트, 호두과자집 알바, 레스토랑 서빙, 콜센터, 시승안내 알바, 여론조사 알바, 교육사 총무, 과외, 학원강사 등등
+그러다 &lt;code class=&quot;language-text&quot;&gt;국비지원 개발과정&lt;/code&gt;을 알게되고 그렇게 결국은, 본격적으로 개발이란걸 직접 해보게 되었다. &lt;/p&gt;
+&lt;p&gt;비전공자도 신청할 수 있다고 하여 신청하였는데 나 빼고 모두 전공자였다.
+열심히 했다. 점차 그 안에서는 잘하게 되었다.
+모두에게 좋은 평가를 받았고 즐거웠다.
+&lt;code class=&quot;language-text&quot;&gt;개발자로 취업&lt;/code&gt;도 할 수 있게 되었다.
+초봉은 참 낮았다. 당시 나에게 초봉은 중요하지 않았다.
+하지만 초봉은 진실로 중요했음을 살수록 뼈저리게 느끼는건 함정…ㅠㅠ&lt;/p&gt;
+&lt;p&gt;처음 개발자가 되었을 때 나는 아마 인상적인 사람이었던듯 하다.
+나로인해 분위기가 달라지는 것이 고맙다는 대표님의 인사와 함께 소정의 격려금도 받았고
+나를 궁금해하는 동료 선배들과도 참 즐거웠던 기억이 있다. &lt;/p&gt;
+&lt;p&gt;글쎄, 어느순간이었을까 내가 멈추게 된 것은?
+한차례 조직개편이 있고 난 뒤 상사와의 마찰로 상당히 주눅이 들었던 것 같다.
+돌아보면 내가 크게 잘못하진 않았던 것 같은데, 힘들었다.&lt;/p&gt;
+&lt;p&gt;점차 자신감이 없어졌다. &lt;code class=&quot;language-text&quot;&gt;즐겁지가 않았다&lt;/code&gt;.
+퇴근후에는 개발을 생각하게 되지 않았다. &lt;/p&gt;
+&lt;p&gt;크고 작은 곡절들을 지나 여러 해를 보내고 몇몇 회사를 거쳐 나는 여전히 개발을 하고 있다.
+당연히 처음보다는 성장했겠지만, 사실은 그다지 성장하지 않았다.
+&lt;code class=&quot;language-text&quot;&gt;&apos;해야한다면 어떻게든 방법을 알아내어 반드시 해내는 것&apos;&lt;/code&gt; 하나는 했다.
+사실 나는 그뿐인것도 같다. &lt;/p&gt;
+&lt;p&gt;그러다 얼마전 좋은 동료와 사수를 만나 같이 일하게 되었다.
+처음으로 정말 좋은 경험이었다. 난 언제나 스스로 알아서 헤쳐나가야만 했었는데..
+팀이라는게 이렇게 든든하기도 하고, 끌어주는 사람이 가이드를 주고 키워드를 던져주면
+잘해보고 싶어서 나도모르게 공부하는 나를 보았다.
+함께 성장하는 기분과, 으쌰으쌰하며 프로젝트를 진행하는 기분, 완성 후 퍼포먼스에 대한 기대,
+설계에 대한 고민, 티타임, 보다 나은 개발을 위한 논의들..&lt;/p&gt;
+&lt;p&gt;즐거웠다. 그런데 격변하는 회사의 사정으로 머지않아 뿔뿔이 흩어지게 되었다.
+한 번 좋은것을 맛보았더니 갈증이 났다.
+&lt;code class=&quot;language-text&quot;&gt;좋은 사람들과 일해보고 싶었다.&lt;/code&gt; 그런 곳을 찾아가고 싶어졌다.
+내가 아쉽다. 더 잘할 수 있을텐데 이정도인 것이 아쉽다.
+내가 만든 나의 천장이 답답하고 벗어나고 싶어졌다.&lt;/p&gt;
+&lt;p&gt;그래서 &lt;code class=&quot;language-text&quot;&gt;공부&lt;/code&gt;를 시작한다.&lt;/p&gt;
+&lt;p&gt;자주 들었으나 한번도 제대로 고민한 적 없는 질문을 생각해보았다.&lt;/p&gt;
+&lt;h2 id=&quot;나는-어떤-개발자가-되고싶은가&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%82%98%EB%8A%94-%EC%96%B4%EB%96%A4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EA%B3%A0%EC%8B%B6%EC%9D%80%EA%B0%80&quot; aria-label=&quot;나는 어떤 개발자가 되고싶은가 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;나는 어떤 개발자가 되고싶은가?&lt;/h2&gt;
+&lt;p&gt;내가 되고 싶은 모습을 정리해보았다. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;나 자신을 아는 사람&lt;/li&gt;
+&lt;li&gt;방향을 찾아가는 사람&lt;/li&gt;
+&lt;li&gt;잘 하는 사람&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;나 자신을 안다는 것은 내 자신이 무엇에 흥미를 느끼고 무엇을 잘하고 못하는지를 아는 것이라고 하겠다.
+방향이란 나에게 맞춰진 방향이기도 하며, 개발을 잘 하기위한 방향이기도 하다.
+잘 하는 것은 시간과 노력을 투자해야 함을 의미한다. &lt;/p&gt;
+&lt;p&gt;개발은 이제 뗄래야 뗄 수 없는 나의 생업.
+스스로에게 떳떳하도록 잘 해내고 싶다.&lt;/p&gt;
+&lt;p&gt;나 자신은 어떤 사람인가
+어떤 방향으로 갈 것인가
+어떻게 잘 할 것인가   &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Quick Start]]></title><description><![CDATA[Getting Started 😎 1. Create a Gatsby site. If you are not using , following Gatsby Getting Started 2. Start developing. 3. Add your content…]]></description><link>https://log4bom.github.io/HTTP/quick_start/</link><guid isPermaLink="false">https://log4bom.github.io/HTTP/quick_start/</guid><pubDate>Sun, 05 Jul 2020 17:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;getting-started-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getting-started-&quot; aria-label=&quot;getting started  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Getting Started 😎&lt;/h1&gt;
 &lt;h2 id=&quot;1-create-a-gatsby-site&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-create-a-gatsby-site&quot; aria-label=&quot;1 create a gatsby site permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Create a Gatsby site.&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;# create a new Gatsby site using the blog starter
 $ npx gatsby new my-blog-starter https://github.com/JaeYeopHan/gatsby-starter-bee&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -192,7 +253,7 @@ draft: false
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Let’s Start! &lt;a href=&quot;https://github.com/JaeYeopHan/gatsby-starter-bee&quot;&gt;Go&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[TIL]]></title><description><![CDATA[Test1]]></description><link>https://log4bom.github.io/TIL/test1/</link><guid isPermaLink="false">https://log4bom.github.io/TIL/test1/</guid><pubDate>Thu, 02 Jul 2020 16:21:13 GMT</pubDate><content:encoded>&lt;p&gt;Test1&lt;/p&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[Your name Thank you for reading my resume. If you want to contact me, Please send me an email.]]></description><link>https://log4bom.github.io/resume-en/</link><guid isPermaLink="false">https://log4bom.github.io/resume-en/</guid><pubDate>Sun, 27 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-name&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#your-name&quot; aria-label=&quot;your name permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Your name&lt;/h1&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[Your name Thank you for reading my resume. If you want to contact me, Please send me an email.]]></description><link>https://log4bom.github.io/resume-en/</link><guid isPermaLink="false">https://log4bom.github.io/resume-en/</guid><pubDate>Sun, 27 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-name&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#your-name&quot; aria-label=&quot;your name permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Your name&lt;/h1&gt;
 &lt;div align=&quot;center&quot;&gt;
 &lt;p&gt;&lt;em&gt;Thank you for reading my resume. If you want to contact me, Please send me an email.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Draft]]></title><description><![CDATA[Draft Post]]></description><link>https://log4bom.github.io/HTTP/draft/</link><guid isPermaLink="false">https://log4bom.github.io/HTTP/draft/</guid><pubDate>Thu, 03 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;p&gt;Draft Post&lt;/p&gt;</content:encoded></item></channel></rss>
