@@ -39,7 +39,7 @@ _간단히 요약하면_
     - RESTFul이 강조하는 의미론에는 안맞아..
     - 지원하지 않는 Client가 존재할 수 있다.. 복병주의 ex) Spring RestTemplate
 
-###RFC (Request For Comments)
+#### *RFC (Request For Comments)
 미국의 국제 인터넷 표준화 기구 ```IETF(Internet Engineering Task Force)```에서 관리하는 문서이다. 
 [참고문서](https://net-study.club/entry/RFC-Request-for-Comments%EB%9E%80-RFC%EC%9D%98-%EC%97%AD%EC%82%AC-RFC-%EC%A2%85%EB%A5%98-RFC-%ED%91%9C%EC%A4%80%ED%99%94-%EC%A0%88%EC%B0%A8)
 
@@ -54,8 +54,8 @@ _간단히 요약하면_
 조회 조건이 길어질경우 **사용을 고려해 볼 수 있다**고 하겠다.
 
 
-개인적으로는 반드시 사용해야 하는 특수한 상황이 아니라면 _사용을 고려하지는 않을 것_ 같다.
-일하면서 배운 생소한 것이어서 한번 정리해보았다.
+개인적으로는 반드시 사용해야 하는 특수한 상황이 아니라면 <span style="color:orange">_사용을 고려하지는 않을 것_ </span>같다.
+일하면서 배운 생소한 것이어서 정리해보았다.
 
 
 [기타 참고 문서](https://if1live.github.io/posts/http-get-request-with-body-and-http-library/)
