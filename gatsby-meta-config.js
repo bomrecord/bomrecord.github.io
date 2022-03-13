@@ -1,5 +1,5 @@
 module.exports = {
-  title: `log4bom`,
+  title: `봄로그`,
   description: ``,
   author: `log4bom`,
   introduction: ``,
