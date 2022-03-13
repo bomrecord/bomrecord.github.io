@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[봄로그]]></title><description><![CDATA[봄로그]]></description><link>https://log4bom.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Mar 2022 07:09:06 GMT</lastBuildDate><item><title><![CDATA[HTTP GET Method에 Body를 붙여 보낼 수 있다]]></title><description><![CDATA[일반적으로는 HTTP GET Method를 사용할 때는 Path Parameter나 Query Parameter 방식으로 데이터를 전송한다. 그런데 GET Method에  를 붙여서 보낼 수도 있다. GET 방식에는 Message Body…]]></description><link>https://log4bom.github.io/HTTP/http_get_method_with_request_body/</link><guid isPermaLink="false">https://log4bom.github.io/HTTP/http_get_method_with_request_body/</guid><pubDate>Fri, 11 Mar 2022 12:21:13 GMT</pubDate><content:encoded>&lt;h3 id=&quot;일반적으로는&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%BC%EB%B0%98%EC%A0%81%EC%9C%BC%EB%A1%9C%EB%8A%94&quot; aria-label=&quot;일반적으로는 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;일반적으로는&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[봄로그]]></title><description><![CDATA[봄로그]]></description><link>https://log4bom.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Mar 2022 07:28:36 GMT</lastBuildDate><item><title><![CDATA[HTTP GET Method에 Body를 붙여 보낼 수 있다]]></title><description><![CDATA[일반적으로는 HTTP GET Method를 사용할 때는 Path Parameter나 Query Parameter 방식으로 데이터를 전송한다. 그런데 GET Method에  를 붙여서 보낼 수도 있다. GET 방식에는 Message Body…]]></description><link>https://log4bom.github.io/HTTP/http_get_method_with_request_body/</link><guid isPermaLink="false">https://log4bom.github.io/HTTP/http_get_method_with_request_body/</guid><pubDate>Fri, 11 Mar 2022 12:21:13 GMT</pubDate><content:encoded>&lt;h3 id=&quot;일반적으로는&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%BC%EB%B0%98%EC%A0%81%EC%9C%BC%EB%A1%9C%EB%8A%94&quot; aria-label=&quot;일반적으로는 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;일반적으로는&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;HTTP GET Method를 사용할 때는&lt;br&gt;
 Path Parameter나 Query Parameter 방식으로 데이터를 전송한다.&lt;/p&gt;
@@ -8,22 +8,19 @@ Path Parameter나 Query Parameter 방식으로 데이터를 전송한다.&lt;/p&
 &lt;p&gt;GET Method에 &lt;code class=&quot;language-text&quot;&gt;Body&lt;/code&gt; 를 붙여서 보낼 수도 있다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;del&gt;GET 방식에는 Message Body가 없다고도 읽었는데&lt;/del&gt;&lt;br&gt;
-오늘 일하다가 GET Body에 Json 넣어서 통신했다. 🙄&lt;/p&gt;
-&lt;p&gt;Body를 붙여 보내면 Spring GetMapping에서도 RequestBody로 받아진다.
-찾아보니 이런 경우는 엘라스틱서치 등에서 사용하는 볼 수 있다고도 한다.&lt;/p&gt;
-&lt;p&gt;HTTP를 처음 접하고부터 Rest API 설계를 할 때까지도&lt;br&gt;
-get에 Body를 보내는 것은 한 번도 고려한 적도 없었고 보지도 못했다.
-php 레거시 프로젝트를 Java/Spring 서버로 컨버팅 하다가 우연히 알게되었다.&lt;br&gt;
-동료는 API 테스트가 정상적으로 된다는데 나는 아무리해도 안 되어서, 요청을 어떻게 보냈냐고 물어봤더니 Get에 Body를 설정해서 보내고 있었다.
-이게 된다고?&lt;/p&gt;
+오늘 일하다가 GET Body에 Json 넣어서 통신했다. 🙄&lt;br&gt;
+API 서버를 개발 중, 동료가 만든 API를 테스트하는데 동료는 정상적으로 된다는데 나는 아무리해도 안 되었다. 요청을 어떻게 보냈냐고 물어봤더니 Get에 Body를 설정해서 보내고 있었고
+Body를 붙여 보내면 Spring GetMapping에서 RequestBody로 받아낼 수 있었다. 의도한 것은 아니고 우연이었던 것 같은데,
+찾아보니 이런 경우는 엘라스틱서치 등에서 사용하는 것을 볼 수 있다고도 한다.&lt;/p&gt;
+&lt;p&gt;HTTP를 처음 접하고부터 Rest API 설계를 할 때도 get에 Body를 보내는 것은 한 번도 고려한 적도 없었고 보지도 못했다.
+get메소드를 사용할 때 했던 고민은 Restful한 설계를 고려하며 path parameter, query string을 어떻게 적절하게 사용할지였다.
+그래서 될줄 몰랐다.&lt;/p&gt;
 &lt;h3 id=&quot;된다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%90%9C%EB%8B%A4&quot; aria-label=&quot;된다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;된다.&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;그런데 &lt;code class=&quot;language-text&quot;&gt;그렇게 쓰는 것에 대한 판단&lt;/code&gt;을 어떻게 해야할까?&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Restful한 설계라는 것을 신경쓰다보면 get메소드를 사용할 때 했던 고민은 path parameter, query string을 어떻게 적절하게 사용할지였다.
-이게 된다고 해서 사용을 해도 될까?&lt;/p&gt;
-&lt;p&gt;가장 괜찮은 관점에서 정리된것 같은 문서를 첨부한다.
-&lt;a href=&quot;https://brunch.co.kr/@kd4/158&quot;&gt;https://brunch.co.kr/@kd4/158&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;이게 된다고 해서 사용을 해도 될까?  &lt;/p&gt;
+&lt;p&gt;가장 괜찮은 관점에서 정리된것 같은 &lt;a href=&quot;https://brunch.co.kr/@kd4/158&quot;&gt;문서&lt;/a&gt; 를 첨부한다.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;간단히 요약하면&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;2014년 이후 나온 RFC스펙(RFC 7230-7237) 을 근거로 하여 무리가 없어보인다.&lt;/li&gt;
@@ -36,20 +33,20 @@ php 레거시 프로젝트를 Java/Spring 서버로 컨버팅 하다가 우연�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;rfc-request-for-comments&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rfc-request-for-comments&quot; aria-label=&quot;rfc request for comments permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RFC (Request For Comments)&lt;/h3&gt;
+&lt;h4 id=&quot;rfc-request-for-comments&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rfc-request-for-comments&quot; aria-label=&quot;rfc request for comments permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;*RFC (Request For Comments)&lt;/h4&gt;
 &lt;p&gt;미국의 국제 인터넷 표준화 기구 &lt;code class=&quot;language-text&quot;&gt;IETF(Internet Engineering Task Force)&lt;/code&gt;에서 관리하는 문서이다.
 &lt;a href=&quot;https://net-study.club/entry/RFC-Request-for-Comments%EB%9E%80-RFC%EC%9D%98-%EC%97%AD%EC%82%AC-RFC-%EC%A2%85%EB%A5%98-RFC-%ED%91%9C%EC%A4%80%ED%99%94-%EC%A0%88%EC%B0%A8&quot;&gt;참고문서&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;표준화를 근거로 판단하는 것은 좋은 기준인것 같다.
-&lt;del&gt;본문을 조회하였는데 아직 이해는 잘..&lt;/del&gt;
-그래도 종종 살펴보아야겠다. &lt;/p&gt;
+&lt;p&gt;표준화를 근거로 판단하는 것은 좋은 기준인것 같다.&lt;br&gt;
+&lt;del&gt;본문을 조회하였는데 아직 이해는 잘..&lt;/del&gt;&lt;br&gt;
+친절하게 설명해준 문서를 힘입어 아래의 정보를 간단히 요약해둔다.&lt;/p&gt;
 &lt;h2 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결론&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;설계에 따라&lt;/strong&gt; 달라지는 부분으로&lt;br&gt;
 큰 무리는 없지만 &lt;strong&gt;주의할점&lt;/strong&gt;은 있으며&lt;br&gt;
 조회 조건이 길어질경우 &lt;strong&gt;사용을 고려해 볼 수 있다&lt;/strong&gt;고 하겠다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;개인적으로는 반드시 사용해야 하는 특수한 상황이 아니라면 &lt;em&gt;사용을 고려하지는 않을 것&lt;/em&gt; 같다.
-일하면서 배운 생소한 것이어서 한번 정리해보았다.&lt;/p&gt;
+&lt;p&gt;개인적으로는 반드시 사용해야 하는 특수한 상황이 아니라면 &lt;span style=&quot;color:orange&quot;&gt;&lt;em&gt;사용을 고려하지는 않을 것&lt;/em&gt; &lt;/span&gt;같다.
+일하면서 배운 생소한 것이어서 정리해보았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://if1live.github.io/posts/http-get-request-with-body-and-http-library/&quot;&gt;기타 참고 문서&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[지나온 길]]></title><description><![CDATA[…]]></description><link>https://log4bom.github.io/TMI/latebut/</link><guid isPermaLink="false">https://log4bom.github.io/TMI/latebut/</guid><pubDate>Fri, 11 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;초등학교 때 동네 &lt;code class=&quot;language-text&quot;&gt;컴퓨터학원&lt;/code&gt;에 다녔고 비주얼베이직을 배워본 기억이 난다.
 그때 그것을 제대로 이해했던것 같진 않다.
 컴퓨터학원 원장선생님의 꿈이 컴퓨터 학교를 세우는 것이라고 했던 것과,
