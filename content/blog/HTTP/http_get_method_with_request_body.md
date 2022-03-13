@@ -15,25 +15,20 @@ Path Parameter나 Query Parameter 방식으로 데이터를 전송한다.
 > GET Method에 ```Body``` 를 붙여서 보낼 수도 있다.
 
 ~~GET 방식에는 Message Body가 없다고도 읽었는데~~  
-오늘 일하다가 GET Body에 Json 넣어서 통신했다. 🙄
+오늘 일하다가 GET Body에 Json 넣어서 통신했다. 🙄  
+API 서버를 개발 중, 동료가 만든 API를 테스트하는데 동료는 정상적으로 된다는데 나는 아무리해도 안 되었다. 요청을 어떻게 보냈냐고 물어봤더니 Get에 Body를 설정해서 보내고 있었고
+Body를 붙여 보내면 Spring GetMapping에서 RequestBody로 받아낼 수 있었다. 의도한 것은 아니고 우연이었던 것 같은데,
+찾아보니 이런 경우는 엘라스틱서치 등에서 사용하는 것을 볼 수 있다고도 한다.
 
-Body를 붙여 보내면 Spring GetMapping에서도 RequestBody로 받아진다. 
-찾아보니 이런 경우는 엘라스틱서치 등에서 사용하는 볼 수 있다고도 한다.
-
-HTTP를 처음 접하고부터 Rest API 설계를 할 때까지도  
-get에 Body를 보내는 것은 한 번도 고려한 적도 없었고 보지도 못했다.
-php 레거시 프로젝트를 Java/Spring 서버로 컨버팅 하다가 우연히 알게되었다.  
-동료는 API 테스트가 정상적으로 된다는데 나는 아무리해도 안 되어서, 요청을 어떻게 보냈냐고 물어봤더니 Get에 Body를 설정해서 보내고 있었다.
-이게 된다고?
+HTTP를 처음 접하고부터 Rest API 설계를 할 때도 get에 Body를 보내는 것은 한 번도 고려한 적도 없었고 보지도 못했다.
+get메소드를 사용할 때 했던 고민은 Restful한 설계를 고려하며 path parameter, query string을 어떻게 적절하게 사용할지였다.
+그래서 될줄 몰랐다.
 
 ### 된다.
 
 >그런데 ```그렇게 쓰는 것에 대한 판단```을 어떻게 해야할까?
 
-
-Restful한 설계라는 것을 신경쓰다보면 get메소드를 사용할 때 했던 고민은 path parameter, query string을 어떻게 적절하게 사용할지였다.
-이게 된다고 해서 사용을 해도 될까?
-
+이게 된다고 해서 사용을 해도 될까?  
 
 가장 괜찮은 관점에서 정리된것 같은 문서를 첨부한다.
 https://brunch.co.kr/@kd4/158
@@ -49,9 +44,9 @@ _간단히 요약하면_
 미국의 국제 인터넷 표준화 기구 ```IETF(Internet Engineering Task Force)```에서 관리하는 문서이다. 
 [참고문서](https://net-study.club/entry/RFC-Request-for-Comments%EB%9E%80-RFC%EC%9D%98-%EC%97%AD%EC%82%AC-RFC-%EC%A2%85%EB%A5%98-RFC-%ED%91%9C%EC%A4%80%ED%99%94-%EC%A0%88%EC%B0%A8)
 
-표준화를 근거로 판단하는 것은 좋은 기준인것 같다.
-~~본문을 조회하였는데 아직 이해는 잘..~~
-그래도 종종 살펴보아야겠다. 
+표준화를 근거로 판단하는 것은 좋은 기준인것 같다.  
+~~본문을 조회하였는데 아직 이해는 잘..~~  
+친절하게 설명해준 문서를 힘입어 아래의 정보를 간단히 요약해둔다.
 
 
 ## 결론
