@@ -1,7 +1,7 @@
 ---
 title: 'HTTP GET Method에 Body를 붙여 보낼 수 있다'
 date: 2022-03-11 12:21:13
-category: 'HTTP'
+category: 'WEB'
 draft: false
 ---
 
