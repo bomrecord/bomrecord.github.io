@@ -2,7 +2,7 @@ module.exports = {
   title: `Chunnycode`,
   description: ``,
   author: `chunnycode`,
-  introduction: `개발자 신춘이의 성장 몸부림.`,
+  introduction: `방향을 고민하는 개발자의 성장 몸부림.`,
   siteUrl: `https://chunnycode.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
