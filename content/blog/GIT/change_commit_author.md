@@ -38,7 +38,7 @@ $ git rebase -i --root
 author에는 "아이디 <이메일>" 형식으로 기입한다.
 
 ```
-$ git commit --amend --author="newspring <happilyerrorafter@gmail.com>"
+$ git commit --amend --author="chunnycode <chunnycode@gmail.com>"
 ```
 
 ### 4\. rebase를 완료시키고 push한다. 
