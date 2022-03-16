@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[춘이코드]]></title><description><![CDATA[춘이코드]]></description><link>https://chunnycode.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Mar 2022 08:24:24 GMT</lastBuildDate><item><title><![CDATA[이전 commit의 author 변경]]></title><description><![CDATA[깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다. 이전 커밋의 author를 변경하기 위한 명령어를 기록한다. 1. rebase 명령어로 바꿀 커밋을 선택해준다. rebase…]]></description><link>https://chunnycode.github.io/GIT/change_commit_author/</link><guid isPermaLink="false">https://chunnycode.github.io/GIT/change_commit_author/</guid><pubDate>Wed, 16 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[춘이코드]]></title><description><![CDATA[춘이코드]]></description><link>https://chunnycode.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Mar 2022 08:48:12 GMT</lastBuildDate><item><title><![CDATA[이전 commit의 author 변경]]></title><description><![CDATA[깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다. 이전 커밋의 author를 변경하기 위한 명령어를 기록한다. 1. rebase 명령어로 바꿀 커밋을 선택해준다. rebase…]]></description><link>https://chunnycode.github.io/GIT/change_commit_author/</link><guid isPermaLink="false">https://chunnycode.github.io/GIT/change_commit_author/</guid><pubDate>Wed, 16 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다.&lt;/p&gt;
 &lt;p&gt;이전 커밋의 author를 변경하기 위한 명령어를 기록한다.&lt;/p&gt;
 &lt;h3 id=&quot;1-rebase-명령어로-바꿀-커밋을-선택해준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-rebase-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A1%9C-%EB%B0%94%EA%BF%80-%EC%BB%A4%EB%B0%8B%EC%9D%84-%EC%84%A0%ED%83%9D%ED%95%B4%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;1 rebase 명령어로 바꿀 커밋을 선택해준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. rebase 명령어로 바꿀 커밋을 선택해준다.&lt;/h3&gt;
 &lt;p&gt;rebase 명령어 세 가지를 소개한다.&lt;/p&gt;
@@ -138,6 +138,7 @@ get메소드를 사용할 때 했던 고민은 Restful한 설계를 고려하며
 &lt;p&gt;&lt;em&gt;개발에 대하여&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Hint 1.&lt;br&gt;
+호불호.&lt;br&gt;
 개발에 대한 나의 관심사는 백엔드나 프론트, 언어에 특별히 갈리진 않았다.
 어떤 기술보다도 그 기술로 할 수 있는 것이 원하는 것이면 상관이 없는 편이다.
 중소기업을 주로 다녔기 때문에 백엔드, 프론트, 디비 모두 했어야 했는데 크게 다르게 느껴지지는 않았다.
@@ -147,12 +148,20 @@ get메소드를 사용할 때 했던 고민은 Restful한 설계를 고려하며
 다른 언어로도 동일한 고민을 할 수도 있고 분야에 따라 적합한 언어가 조금씩 다르겠지만
 웹 개발을 하면서 아키텍처에 대한 고민을 엿보기 가장 쉬운 스펙이라고 생각했다. &lt;/li&gt;
 &lt;li&gt;Hint 2.&lt;br&gt;
+장단점.&lt;br&gt;
 잘 한다고 생각하는 것은 분석과 디버깅이다. 시스템을 파악하고 나면 빠르게 디버깅 포인트를 찾아내는 것에 자신이 있다.
 또 모르는 것이었어도 어떻게든 찾아서 해내왔기 때문에 모르더라도 찾아서 해내는 것에는 자신이 있다.
 비개발팀과 소통하는것과, 의견을 내고 서비스를 개선하는 것을 어려워하지 않는 편이다. 이것은 일할 때 큰 장점이 되어주었다.
 자신이 없는 것은 깊이있는 지식이다. 딥다이브, 많은 시간을 할애하여 공부해서 깊이있게 이해했어야 하는 영역들이 존재하는데,
 그러한 부분은 잘 못해왔었다. 또한 리드하는 부분에 있어서 리더십을 갖추고자 노력하는 부분이 부족했다고 생각한다.
 부족한 부분들에 대해선 정면으로 돌파해보고자 한다. 깊이 있게 공부하고 그 내용을 실제로 적용하며 체화시키는 것이 앞으로의 목표이다.  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;서비스에 대하여&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1인 기업이 되고 싶다는 막연한 생각이 늘 있었다. 혼자서 처음부터 끝까지 운영하는 어떤 서비스를 제공하고싶다.
+차차 토이프로젝트로 한걸음씩 다가가 보겠다.  &lt;/li&gt;
+&lt;li&gt;인터넷 취약계층에게 보탬이 되는 서비스를 만들수도 있을까? 사실 이건 기술적인 부분보다도 기획과 UX의 영역이라고 생각한다.
+사회복지학과를 나와서인지 인터넷 취약계층에 대한 접근성을 높이는 웹 서비스 고민을 막연하지만 이따금씩 하고는 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;앞으로의-시간은-기술적인-고민으로-채워가고싶다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%EC%8B%9C%EA%B0%84%EC%9D%80-%EA%B8%B0%EC%88%A0%EC%A0%81%EC%9D%B8-%EA%B3%A0%EB%AF%BC%EC%9C%BC%EB%A1%9C-%EC%B1%84%EC%9B%8C%EA%B0%80%EA%B3%A0%EC%8B%B6%EB%8B%A4&quot; aria-label=&quot;앞으로의 시간은 기술적인 고민으로 채워가고싶다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;앞으로의 시간은 기술적인 고민으로 채워가고싶다&lt;/h3&gt;
 &lt;p&gt;작은 기능이라도 어떻게 설계하는 것이 좋은가, 어떤 기술들을 조합하여 사용하는것이 적절하며 왜 그러한가에 대한 고민들로 채워가고 싶다.
