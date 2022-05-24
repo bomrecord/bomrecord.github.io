@@ -2,7 +2,7 @@
 title: '어떤 개발자가 되고싶은가'
 date: 2022-03-10 09:24:15
 category: '생각'
-draft: false
+draft: true
 ---
 
 ### 나는 어떤 개발자가 되고싶은가?

@@ -1,7 +1,7 @@
 ---
 title: '이전 commit의 author 변경'
 date: 2022-03-16 03:24:15
-category: 'git'
+category: 'GIT'
 draft: false
 ---
 
