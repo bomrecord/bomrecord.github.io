@@ -1,4 +1,285 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[춘이코드]]></title><description><![CDATA[춘이코드]]></description><link>https://chunnycode.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Apr 2022 08:06:11 GMT</lastBuildDate><item><title><![CDATA[TIL-2022-03-30]]></title><description><![CDATA[오늘 한 일 코딩테스트 준비 이론정리 + 면접질문 준비
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[춘이코드]]></title><description><![CDATA[춘이코드]]></description><link>https://chunnycode.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 May 2022 15:37:10 GMT</lastBuildDate><item><title><![CDATA[JWT 로그인을 구현하면서]]></title><description><![CDATA[JWT : JSON Web Token RFC 7519 Specialized website about JWT with tools and documentation : JWT Web Decoder JWT는 JSON…]]></description><link>https://chunnycode.github.io/JWT/jwt/</link><guid isPermaLink="false">https://chunnycode.github.io/JWT/jwt/</guid><pubDate>Tue, 24 May 2022 20:54:15 GMT</pubDate><content:encoded>&lt;h2 id=&quot;jwt--json-web-token&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#jwt--json-web-token&quot; aria-label=&quot;jwt  json web token permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JWT : JSON Web Token&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc7519&quot;&gt;RFC 7519&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Specialized website about JWT with tools and documentation : &lt;a href=&quot;https://jwt.io/&quot;&gt;JWT Web Decoder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JWT는 JSON 객체를 통해 안전하게 정보를 전송할 수 있는 웹 표준 RFC7519 이다.&lt;br&gt;
+간단하게 말해 JSON을 사용한 TOKEN 인증 방식을 말한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1200px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 23%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAAz0lEQVQY002QUW/CMAyE8///HqIMssLYwzRCQYi2KGls3y5NkPbw+epzenLizAwGmIkCMZEIpFRZUvVS89+kCJMMlD/JmtFway32HCHHK3IXIKcbpB+QDzdC9QPEF5/zj4C8DVjOT+QZyKO9I9Z81+JMH1yoA7QnZx7cs99QD8Q3dpz98PhI7iSQoQZZ29TVGwOPyeAvii4IdheBvyr6oPgix0FxIvtfweeY8Z3oR/pFibYNS3XruiwLdSJPoWqD/cvq99z6ifM5V6am/9/wD8OyhQ9ViVLWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;encoded jwt3&quot;
+        title=&quot;encoded jwt3&quot;
+        src=&quot;/static/ef11eceff9216e3d4b3c4cd24db63f35/c1b63/encoded-jwt3.png&quot;
+        srcset=&quot;/static/ef11eceff9216e3d4b3c4cd24db63f35/5a46d/encoded-jwt3.png 300w,
+/static/ef11eceff9216e3d4b3c4cd24db63f35/0a47e/encoded-jwt3.png 600w,
+/static/ef11eceff9216e3d4b3c4cd24db63f35/c1b63/encoded-jwt3.png 1200w,
+/static/ef11eceff9216e3d4b3c4cd24db63f35/d1882/encoded-jwt3.png 1562w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;xxxxyyyyzzzz&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#xxxxyyyyzzzz&quot; aria-label=&quot;xxxxyyyyzzzz permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;xxxx.yyyy.zzzz&lt;/h2&gt;
+&lt;p&gt;구조는 위와 같으며 ’.’ 으로 각각 구분된 문자열로 이루어져 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 959px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAAsSAAALEgHS3X78AAADsUlEQVQ4y6WUzWskRRjGo15DckgyGchRyK5xVxxjPobAbpQFQ1bw4DIQ8R/w5MF4CiiKsDnsUd1MzLroRfAgeBeEMCHqbpLO5mM+8jEyyawmmfT0TPf0dLqr6vGt6p7OZJ1dBAse6uutX731VHW3/ZlefzOd1d5bXdUSuWw2sbW1lcjlcol0Op3IUv9ZymQyid3dnUQmnZ16+NtKtE2WzQepjd38JlbX1vG4WISu67BtG+VyGaZptpRlWWFdOtGxX9jDjz//kFDAazdurk3ceBsTE295Y2NjfHBwkMfjcT4+Ps5HR0dVe2RkJGzH46N8aGiIDw8Pq9hr1697kzcn8fLVgSkFvPRibO3yldcxMHCZRSK9or29XfREIqK/v1/0Uh2NRkV3d7fo6uoSEer39PSIjo4O0dnZqWL7+vp4LBZDtDfqA0ulYw1UPM9jVMA5h6xd14VhGNBPddTIApqXYWq+IUGFxrmAwOLiog88OjrSqA+zWmWybi6C+wOO4yjPKpWKAjWHyD1kY3l52Qfm83nNoMDDYpF5ctcgoiFZZKaFQgEHhQMFb2Qq/KLClpaWfGDFMNSRYdkMVROiXIEwApUNCNdTFtTrTphSwxqS4EHKqVTKB54en2jI6nC1AnNyJuz1OurbNuqPSCs2uEWLBblhn1HbhqjWgsMKlWHjICFQL+kadPJpH8zep0T3SFmgWgTZANh1Ic0Eag5lbUFUaufuNXkYAkununboAo9OPJY5Zdg3GA5JRXJgr85gMQFGNy4fsfSYX7zpFkfWdU26c+xwVmONbUWYhTyVRz7Ky6Dlak6IUOGlnB+ZgMFq5lsj/IOIAE61BDETcA2y5m+q9fDRtPAwAHIhmGiCiCeBFhRUinv/ASiagE9C3TMXds1EjeQx19/gaR4+Exg8D5c+O91ylPz1Inw2T/WwAbygBpggBYsjV2H4q8ZQMBmMM5mlSuHfz0b9HOj1EhEXpcbV8YqWh7zp4TE9pwJBdQLKvwLFXAQ6FX3t/JaFaC0eqNVc8HNYCoD3Mier03lgOlP3PsrUuRS1+UzO4V/sOfzzXYd/uuPwz6i+ve/wT6j9cRAj9WG67t05EPjp1wA4vXK0fWUDiP1xhlcfMqXXSOMaw1Ra4N0tjnc2OSY3OG5tc7xB46888MK4l353cWsH+P6X1PsKOD8398H9hW/uLMwnb9+bT842lEwmZ7+cS85+RfqadHfO78vx5rgF6n93/9vZmZmZq21BeY70wv/U8xJEVrb9A4DNoECq/l0lAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;legacy app auth 5&quot;
+        title=&quot;legacy app auth 5&quot;
+        src=&quot;/static/59d8f25cf0111c6996df9e630c5b5253/d7abb/legacy-app-auth-5.png&quot;
+        srcset=&quot;/static/59d8f25cf0111c6996df9e630c5b5253/5a46d/legacy-app-auth-5.png 300w,
+/static/59d8f25cf0111c6996df9e630c5b5253/0a47e/legacy-app-auth-5.png 600w,
+/static/59d8f25cf0111c6996df9e630c5b5253/d7abb/legacy-app-auth-5.png 959w&quot;
+        sizes=&quot;(max-width: 959px) 100vw, 959px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;각각의 파트는 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Header&lt;/li&gt;
+&lt;li&gt;Payload&lt;/li&gt;
+&lt;li&gt;Signature &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;세 부분으로 이루어져있다.&lt;br&gt;
+헤더는 토큰 타입과 해싱 알고리즘을 저장하고, 페이로드는 실제 전달할 정보를, 서명에는 위변조 방지를 위한 값이 들어간다. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Header&lt;br&gt;
+헤더는 typ와 alg 두가지 정보로 구성된다.
+typ는 토큰의 타입을 지정한다.&lt;br&gt;
+alg는 Signature를 해싱하기위한 알고리즘을 지정한다. &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payload&lt;br&gt;
+토큰에서 사용할 정보들의 조각인 Claim이 담겨있다.
+클레임은 Registered Claim, Public Claim, Private Claim 세가지로 나누어진다.
+JSON 형태로 정보들을 담는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;등록된 클레임&lt;br&gt;
+이미 정해진 종류의 데이터들로 선택적 작성이 가능하나 사용이 권장된다.&lt;br&gt;
+간결성을 위해 key의 길이는 모두 3이다. &lt;/li&gt;
+&lt;li&gt;iss : 토큰 발급자 issuer&lt;/li&gt;
+&lt;li&gt;sub : 토큰 제목 subject&lt;/li&gt;
+&lt;li&gt;aud : 토큰 대상자 audience&lt;/li&gt;
+&lt;li&gt;exp : 토큰 만료 시간 expiration (ex 1123451351351)&lt;/li&gt;
+&lt;li&gt;nbf : 토큰 활성 날짜 not before (활성날짜 이후부터 활성화됨)&lt;/li&gt;
+&lt;li&gt;iat : 토큰 발급 시간 issued at (토큰발급 이후의 경과시간) &lt;/li&gt;
+&lt;li&gt;jti : JWT 토큰 식별자&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;공개 클레임&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;사용자 정의 클레임으로 공개용 정보를 위해 사용되고 uri 포맷을 사용해 충돌을 방지한다 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{ 
+&quot;https://chunnycode.github.io&quot; : true
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;비공개 클레임&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;사용자 정의 클레임으로 서버와 클라이언트 사이에 임의의 정보를 저장한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{ 
+&quot;userId&quot; : user1
+&quot;userName&quot; : chunnycode
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Signature&lt;br&gt;
+고유의 암호화 코드로 토큰을 인코딩하거나 유효성 검증을 할 때 사용한다.&lt;br&gt;
+헤더와 페이로드의 값을 각각 base64url로 인코딩후, 그 값을 비밀 키를 이용해 헤더에서 정의한 알고리즘으로 해싱하고&lt;br&gt;
+이 값을 다시 base64url로 인코딩하여 생성한다. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;jwt-로그인-vs-세션-로그인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#jwt-%EB%A1%9C%EA%B7%B8%EC%9D%B8-vs-%EC%84%B8%EC%85%98-%EB%A1%9C%EA%B7%B8%EC%9D%B8&quot; aria-label=&quot;jwt 로그인 vs 세션 로그인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JWT 로그인 vs 세션 로그인&lt;/h2&gt;
+&lt;p&gt;보통 로그인을 구현할 때 세션을 사용한다.&lt;br&gt;
+클라이언트에서 서버로 로그인을 요청하면 서버는 정보를 확인후 세션 아이디를 서버에 저장하고 클라이언트에게도 보낸다.&lt;br&gt;
+이후 클라이언트는 요청시 세션아이디를 쿠키에 담아서 요청한다.&lt;br&gt;
+서버는 쿠키 속 세션아이디를 확인해 로그인된 사용자인지 확인하는 방식이다. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABh0lEQVQoz41R2Y7UMBCc//8nHsg+LMqMQGIEKIt2CRPvOPfts9027STLPiFhlZzuRFVd1Tm1o/mQPiefXz59K1+4Df84frv76zV/eGjOZ8c5tadZwPUn//L9Nbv11QD0Smu9LPM0jeu6OOestXT7jT49PeXJxzpNse0ieRe2NqALHgO4IKTr+rWsxr5f51k37TyMUhtvdAAfUGhTN7/yvGma0+bHS+EQfF3WfVVO+dfh+eKmktr6ztFCcOjBERAwSL0wliQJY+yYrCV6Y1Fr0jdDKevCy9kp5aTyRHAYvREAwjzDNNVtuy7LG9kEH2N59PQMO2LtEcyKIKg7VgeU8KgPslLBQei6sWD3229GYIzfCq7msfzx2GSPSEbIvgswS5QyRvX+jayD2b+56HEH4tHCVkSQ/VWZqh763gIcZEOZKRKJe9RirV5Zze+8KCwNIQ1SjXMh/hIlFedpmmZZ9r4wpNEQgcZoIYwQal39vqS/IBUpxTieL5d3stkW9l+H1AG6rpNS/gEAinkG40Pm7gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;session flow&quot;
+        title=&quot;session flow&quot;
+        src=&quot;/static/19b6e2cf82dded8cbc4f58f65d4288ba/8c557/session-flow.png&quot;
+        srcset=&quot;/static/19b6e2cf82dded8cbc4f58f65d4288ba/5a46d/session-flow.png 300w,
+/static/19b6e2cf82dded8cbc4f58f65d4288ba/0a47e/session-flow.png 600w,
+/static/19b6e2cf82dded8cbc4f58f65d4288ba/8c557/session-flow.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;JWT 방식은 클라이언트가 서버에 로그인 요청을 보내면 정보를 확인 후 토큰으로 응답한다.
+이 때 토큰에는 사용자에 대한 정보가 일부 담겨있다.
+토큰은 서버에 저장하지 않는다.&lt;br&gt;
+이후 클라이언트는 요청시 헤더에 토큰을 함께 보낸다.
+비대칭키 암호화 방식을 사용하기 때문에 서버측에서는 이 토큰을 받아 시그니처를 복호화하여 디코딩하는 방식으로 토큰의 유효성을 검증한다.
+인증이 필요한 리소스에 접근할 시 복잡한 인증 과정 없이 토큰만으로 인증 및 인가를 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 470px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 104.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsSAAALEgHS3X78AAACr0lEQVQ4y61U227aQBDN/39HI/WhfagUJY3a5qVtkoe0RWBsbr7fwGB7sSGYAD6dWWJkB+hTRxq8rGePZ+acnQu8WlmW8mkZBpROG6rWg+N66Cgqer0e1K4Khbw/GGKkj+D57uFcWcO4qBa73U5uRtEEBoEyWJIKWJYNPwjguS7tmwiCEI5jI45nMp7PSdDXhC6qxf+wQ4b5YoFEZBBZjnSeYxanWK/XRxlUVRRFgSnFiGwBQfFxIghjuc+Qf56UIT7ePeH2UcNn8qufCibTpNHbCpwtmMxw86CSd3Fzr+DrbxMtzaDg3R7wl2bi3fUDPnx7wuXVD3z6riKiDCSIzKxsND+YxPhCIJfX93h/+4g7JUB76KLcbvaAlhtAGbn4o+no6i66IwerVYFoPEaXmB0NdWg9DbbtYLvZyPKUoY2BPabqBhTvwvaCY1Li2RRh4GO5yCFECs/zYJrWnmHTgK4T+46LNE1kjD4c0DunRsprDw+SmU5JJhbmWUaHUuR5juVyKZ3X7Bm9E0JgPp9LCXmeX+tvTYdsUwJst9sEJpAkCRwqsd8bYDDoI6Ty4zghj6XzB6MoItCgQV4DkANZEpWJLIUbehhHIUQujnS33W4xpg8dbkxZHgNySdUeH2A/Z6zVMAwbej0LyB0OxgF6fRUqMRzFERbP1MdlhmJdHAReZVhZA5B7wqTMZjO5th0LI5OGgTGUT8M2YNomXN+TH+90OtJfXl6woNvGzwZgBcT/N6S3U3e1uoLcCi5ZVVVJGk8nzrgBOJlM0Gq1DsCsu47ShaIo8H1f7nEMe8WwpmkSuCLzqIer1eqQEUvHMCzoNLaKYn2UMVfBwDg1D0+xXJ9z9f/VXpPlMzrk2/B2yryd6qcAzwq7Dngqq7cZ1oV9BMg9qYT8r0leB2ep1Pf+AosuSsSfAa+FAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;jwt flow&quot;
+        title=&quot;jwt flow&quot;
+        src=&quot;/static/14bd9a7ceb0dd3330a7f15d6f02a9d87/f96db/jwt-flow.png&quot;
+        srcset=&quot;/static/14bd9a7ceb0dd3330a7f15d6f02a9d87/5a46d/jwt-flow.png 300w,
+/static/14bd9a7ceb0dd3330a7f15d6f02a9d87/f96db/jwt-flow.png 470w&quot;
+        sizes=&quot;(max-width: 470px) 100vw, 470px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;특징&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;최근 범용적으로 사용되고있고 웹, 모바일 호환성이 좋다.&lt;/li&gt;
+&lt;li&gt;Payload가 많아져 토큰이 커지면 서버에 부담이 될수도 있다. &lt;/li&gt;
+&lt;li&gt;토큰 재발급 전에 사용자 정보가 갱신되면 갱신된 정보가 적용되지 않는다.&lt;/li&gt;
+&lt;li&gt;Stateless 환경에서 용이하다. &lt;/li&gt;
+&lt;li&gt;만료시간전까지는 강제로 만료시킬 수 없어 노출되지 않도록 관리하는것이 중요하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;탈취자에게도-허용한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%83%88%EC%B7%A8%EC%9E%90%EC%97%90%EA%B2%8C%EB%8F%84-%ED%97%88%EC%9A%A9%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;탈취자에게도 허용한다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;탈취자에게도 허용한다.&lt;/h3&gt;
+&lt;p&gt;JWT는 Stateless한 방식이다. 따라서 서버측에서는 토큰을 가진 사람이 정말 권한이 있는 당사자인지 확인할 수 없다는 특징이 있다.
+토큰 만으로 인증과 인가를 하기 때문에 액세스 토큰을 탈취하여 사용해도 그것을 구분할 수 없다는 의미이다. &lt;/p&gt;
+&lt;h3 id=&quot;refresh-token의-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#refresh-token%EC%9D%98-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;refresh token의 사용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Refresh Token의 사용&lt;/h3&gt;
+&lt;p&gt;그래서 여러가지 보완을 하는 장치들이 생겨났다.
+RFC7519 에도 나와있지 않고 혹자는 권장사항이 아니라고도 하는 것을 읽었으나
+대표적으로 사용되는 방법으로는 Refresh Token 이 있다.  &lt;/p&gt;
+&lt;p&gt;방법은 이러하다.
+리프레시 토큰은 사용자를 인증하는 것이 아니라 Access Token을 생성하는 용도로 쓰인다.
+Access Token을 탈취당했더라도 유효기간을 짧게 설정하여 피해가 최소화 되도록 하기 위해 Access Token의 만료 시간을 짧게 설정한다.&lt;br&gt;
+Refresh Token의 유효기간은 길게 설정한다.
+사용자는 두 토큰을 서버에 전송해 인증하고, 만료시에는 Refresh Token으로 새로운 Access Token을 받아 저장한다.
+Access Token이 탈취되어도 유효기간이 짧아 쓸 수 없도록 한 것이다.
+정상적인 사용자는 Refresh Token을 사용하여 새로운 Access Token을 생성하고 사용할 수 있다. &lt;/p&gt;
+&lt;h3 id=&quot;refresh-token이-탈취당하면&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#refresh-token%EC%9D%B4-%ED%83%88%EC%B7%A8%EB%8B%B9%ED%95%98%EB%A9%B4&quot; aria-label=&quot;refresh token이 탈취당하면 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Refresh Token이 탈취당하면&lt;/h3&gt;
+&lt;p&gt;이또한 구분할 수 없다.
+이를 보완하기 위해서는 서버에 저장공간을 사용하게 된다.
+이 부분에서는 여러가지 방법이 존재하는듯 하다.  &lt;/p&gt;
+&lt;p&gt;Access Token과 Refresh Token 쌍을 저장하고 둘 다 확인하여 누군가가 쌍이 다른 Token을 보내오면 모든 토큰을 만료시키는 방법이다.
+토큰 위조를 어느정도 변별하고, 변조가 감지되었을 때 모두 만료시켜 새로운 로그인이 필요하도록 만드는 것이다.
+혹자는 Refresh Token을 일회성으로 만드는 방법도 고려한다고 하였다. &lt;/p&gt;
+&lt;h3 id=&quot;로그아웃&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83&quot; aria-label=&quot;로그아웃 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로그아웃&lt;/h3&gt;
+&lt;p&gt;클라이언트에서 저장된 토큰을 삭제하면 된다.
+혹시라도 로그아웃한 당시의 액세스토큰으로 접근했을 때 로그아웃 처리가 되도록 만료시키는 효과를 주고 싶다면&lt;br&gt;
+어떤식으로든 서버측의 저장소를 사용할 수 밖에 없다.
+서버측에 Access Token을 블랙리스트처럼 만료로 저장해두고 관리하던가,
+혹자는 로그아웃 토큰을 구현하기도 하는것 같다. &lt;/p&gt;
+&lt;p&gt;그런데 서버의 저장소를 많이 사용한다면 토큰을 사용하는 의미가 퇴색되는것은 아닌가 하는 의문이 들기도 한다.&lt;/p&gt;
+&lt;h3 id=&quot;구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84&quot; aria-label=&quot;구현 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현&lt;/h3&gt;
+&lt;p&gt;스프링을 비롯한 각종 프레임워크에서 이미 JWT에 관한 구현체가 준비되어있기 때문에 가져다 쓰면 된다.
+Spring의 경우 Jwts, Claim이 지원된다.
+구현한 일부 코드는 이러하다. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@Slf4j
+@RequiredArgsConstructor
+@Component
+public class TokenProvider {
+
+    @Value(&quot;${secret.access}&quot;)
+    private String secretKey;
+    @Value(&quot;${secret.refresh}&quot;)
+    private String refreshKey;
+
+    private final long accessTokenValidTime = 60 * 1000L; // 1 hour
+    private final long refreshTokenValidTime =  7 * 24 * 60 * 60 * 1000L;   // 1 week
+
+    @PostConstruct
+    protected void init() {
+        secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
+        refreshKey = Base64.getEncoder().encodeToString(refreshKey.getBytes());
+    }
+
+    public String createAccessToken(String memberId){
+
+        Claims claims = Jwts.claims();  // JWT payload 에 저장되는 정보단위
+        claims.put(&quot;memberId&quot;, memberId);
+        Date now = new Date();
+
+        return Jwts.builder()
+                .setClaims(claims) 
+                .setIssuedAt(now) 
+                .setExpiration(new Date(now.getTime() + accessTokenValidTime)) 
+                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .compact();
+    }
+
+    public String createRefreshToken(String memberId){
+        Claims claims = Jwts.claims();
+        claims.put(&quot;memberId&quot;, memberId);
+        Date now = new Date();
+
+        return Jwts.builder()
+                .setClaims(claims)
+                .setIssuedAt(now)
+                .setExpiration(new Date(now.getTime() + refreshTokenValidTime))
+                .signWith(SignatureAlgorithm.HS256, refreshKey)
+                .compact();
+    }
+
+    public String resolveAccessToken(HttpServletRequest request) {
+        log.info(&quot;AccessToken is &quot; + request.getHeader(&quot;accessToken&quot;));
+        return request.getHeader(&quot;accessToken&quot;);
+    }
+
+    public String resolveRefreshToken(HttpServletRequest request) {
+        log.info(&quot;RefreshToken is &quot; + request.getHeader(&quot;refreshToken&quot;));
+        return request.getHeader(&quot;refreshToken&quot;);
+    }
+
+    public Claims getClaimsAccessToken(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(DatatypeConverter.parseBase64Binary(secretKey))
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
+    public Claims getClaimsRefreshToken(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(DatatypeConverter.parseBase64Binary(refreshKey))
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+    
+    ...... &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;이해한-것&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%ED%95%B4%ED%95%9C-%EA%B2%83&quot; aria-label=&quot;이해한 것 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이해한 것&lt;/h3&gt;
+&lt;p&gt;간단한 구현과 함께 공부를 하고나서 JWT에 대해 내가 이해한 핵심 내용은&lt;br&gt;
+JWT 토큰이 가지는 인증, 인가, 유효성 등을 적절하게 사용하는 것에 있다고 생각하였고
+JWT 토큰 사용시 발생하는 단점들에 대한 보완정책들
+Token 발급 시 DB를 조회하도록 할 것인가에 대한 부분이라던가, 여러가지 동시 로그인, 로그아웃에 대한 제어 등에 관한 문제는&lt;br&gt;
+서비스를 개발하는 사람이 선택하여 작성할 문제라고 파악하였다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TIL-2022-03-30]]></title><description><![CDATA[오늘 한 일 코딩테스트 준비 이론정리 + 면접질문 준비
 면접질문 찾은 리스트들을 에버노트에 정리하였다. 앞으로도 추가해나가면서 답변을 작성해두고자 한다.  스프링 강좌 시청 김영한님 스프링 핵심원리 기본편 강좌 시청 : 1-4강 코드 작성  To do…]]></description><link>https://chunnycode.github.io/TIL/TIL220317/</link><guid isPermaLink="false">https://chunnycode.github.io/TIL/TIL220317/</guid><pubDate>Wed, 30 Mar 2022 19:54:15 GMT</pubDate><content:encoded>&lt;h3 id=&quot;오늘-한-일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%ED%95%9C-%EC%9D%BC&quot; aria-label=&quot;오늘 한 일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 한 일&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;코딩테스트 준비&lt;/li&gt;
@@ -8,7 +289,7 @@
 김영한님 스프링 핵심원리 기본편 강좌 시청 : 1-4강&lt;/li&gt;
 &lt;li&gt;코드 작성 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;to-do-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#to-do-list&quot; aria-label=&quot;to do list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;To do list&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[이전 commit의 author 변경]]></title><description><![CDATA[깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다. 이전 커밋의 author를 변경하기 위한 명령어를 기록한다. 1. rebase 명령어로 바꿀 커밋을 선택해준다. rebase…]]></description><link>https://chunnycode.github.io/git/change_commit_author/</link><guid isPermaLink="false">https://chunnycode.github.io/git/change_commit_author/</guid><pubDate>Wed, 16 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다.&lt;/p&gt;
+&lt;h3 id=&quot;to-do-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#to-do-list&quot; aria-label=&quot;to do list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;To do list&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[이전 commit의 author 변경]]></title><description><![CDATA[깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다. 이전 커밋의 author를 변경하기 위한 명령어를 기록한다. 1. rebase 명령어로 바꿀 커밋을 선택해준다. rebase…]]></description><link>https://chunnycode.github.io/GIT/change_commit_author/</link><guid isPermaLink="false">https://chunnycode.github.io/GIT/change_commit_author/</guid><pubDate>Wed, 16 Mar 2022 03:24:15 GMT</pubDate><content:encoded>&lt;p&gt;깃 커밋을 했는데 잔디가 표시되지 않아서 찾아보았더니 회사의 아이디로 커밋이 되었다.&lt;/p&gt;
 &lt;p&gt;이전 커밋의 author를 변경하기 위한 명령어를 기록한다.&lt;/p&gt;
 &lt;h3 id=&quot;1-rebase-명령어로-바꿀-커밋을-선택해준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-rebase-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A1%9C-%EB%B0%94%EA%BF%80-%EC%BB%A4%EB%B0%8B%EC%9D%84-%EC%84%A0%ED%83%9D%ED%95%B4%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;1 rebase 명령어로 바꿀 커밋을 선택해준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. rebase 명령어로 바꿀 커밋을 선택해준다.&lt;/h3&gt;
 &lt;p&gt;rebase 명령어 세 가지를 소개한다. &lt;/p&gt;
